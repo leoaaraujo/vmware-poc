@@ -17,7 +17,7 @@
 - name: Show detailed disk list
   ansible.builtin.debug:
     msg: |
-      "{{ disk_list | map(attribute='controller_key') | list | unique }}"
+      "{{ disk_list | map(attribute='controller_key') | list | unique | list }}"
 
 - name: test
   ansible.builtin.set_fact:
