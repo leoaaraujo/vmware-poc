@@ -1,0 +1,15 @@
+- name: Test VMware collection
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Get vCenter version
+      community.vmware.vmware_about_info:
+#        hostname: "vcsnsx-vc.infra.demo.redhat.com"
+#        username: "sandbox-xdlf9@demo"
+#        password: "e.lVsWlgQx31"
+        validate_certs: false
+      register: about
+
+    - debug:
+        var: about
+
