@@ -18,7 +18,8 @@
 - name: Show detected VM disk summary
   ansible.builtin.debug:
     msg:
-      - "{{ disk_list | map(attribute='controller_key') | list }}"
+      - "{{ disk_list | map(attribute='controller_key') }}"
+      - "{{ disk_list | map(attribute='controller_key') | list | flatten | first }}"
 
 
 - name: Calculate next SCSI controller and unit number
