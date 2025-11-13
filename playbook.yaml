@@ -2,12 +2,13 @@
   hosts: localhost
   connection: local
   gather_facts: false
+
+  collections:
+    - community.vmware
+
   tasks:
     - name: Get vCenter version
       community.vmware.vmware_about_info:
-#        hostname: "vcsnsx-vc.infra.demo.redhat.com"
-#        username: "sandbox-xdlf9@demo"
-#        password: "e.lVsWlgQx31"
         validate_certs: false
       register: about
 
