@@ -21,8 +21,8 @@
 
 - name: test
   ansible.builtin.set_fact:
-    used_controllers: "{{ disk_list | map(attribute='controller_key') | list | unique }}"
-    scsi_controller: "{{ (used_controllers | sort | last) | default(0) }}"
+    used_controllers: "{{ (disk_list | map(attribute='controller_key') | list | unique | list) if disk_list | length > 0 else [1000] }}"
+    scsi_controller: "{{ (used_controllers | sort | last) | int }}"  
 
 - name: Show detailed disk list
   ansible.builtin.debug:
