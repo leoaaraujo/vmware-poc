@@ -8,9 +8,9 @@
         state: present
         type: "{{ disk_type }}"
         datastore: "{{ target_datastore }}"
-        scsi_controller: "{{ scsi_controller | default(omit) }}"
-        unit_number: "{{ next_unit_number | default(omit) }}"
-        disk_mode: "{{ disk_mode }}"
+        scsi_controller: "{{ scsi_controller  }}"
+        unit_number: "{{ next_unit_number }}"
+        disk_mode: "{{ disk_mode | default('persistent') }}"
   register: add_disk_result
 
 - name: Show result summary
