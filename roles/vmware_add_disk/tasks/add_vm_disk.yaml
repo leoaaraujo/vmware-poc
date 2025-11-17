@@ -10,7 +10,7 @@
         datastore: "{{ target_datastore }}"
         scsi_controller: "{{ scsi_controller  }}"
         unit_number: "{{ next_unit_number }}"
-        disk_mode: "{{ disk_mode | default('persistent') }}"
+        disk_mode: "{{ disk_mode }}"
   register: add_disk_result
 
 - name: Show result summary
