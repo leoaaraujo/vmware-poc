@@ -1,4 +1,4 @@
 # ignore test files
-test_conn.yaml
+\test_conn.yaml
 *.log
 *.json
