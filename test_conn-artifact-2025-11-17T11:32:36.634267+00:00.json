@@ -1,0 +1,481 @@
+{
+    "plays": [
+        {
+            "__play_name": "Test VMware collection",
+            "name": "Test VMware collection",
+            "pattern": "localhost",
+            "play": "Test VMware collection",
+            "play_pattern": "localhost",
+            "play_uuid": "2e881c0a-7777-2d53-c351-000000000005",
+            "playbook": "/home/student1/vmware-poc/test_conn.yaml",
+            "playbook_uuid": "838b69bc-86aa-4dc2-9dbc-cefc1bce0383",
+            "tasks": [
+                {
+                    "__changed": false,
+                    "__duration": "2s",
+                    "__host": "localhost",
+                    "__number": 0,
+                    "__result": "Ok",
+                    "__task": "Get vCenter version",
+                    "__task_action": "community.vmware.vmware_about_info",
+                    "duration": 1.815857,
+                    "end": "2025-11-17T11:32:32.549531",
+                    "event_loop": null,
+                    "host": "localhost",
+                    "play": "Test VMware collection",
+                    "play_pattern": "localhost",
+                    "play_uuid": "2e881c0a-7777-2d53-c351-000000000005",
+                    "playbook": "/home/student1/vmware-poc/test_conn.yaml",
+                    "playbook_uuid": "838b69bc-86aa-4dc2-9dbc-cefc1bce0383",
+                    "remote_addr": "127.0.0.1",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "about_info": {
+                            "api_type": "VirtualCenter",
+                            "api_version": "8.0.3.0",
+                            "build": "24322831",
+                            "instance_uuid": "3a76dcad-70e0-4775-9e3f-f7d20e1dd8f0",
+                            "license_product_name": "VMware VirtualCenter Server",
+                            "license_product_version": "8.0",
+                            "locale_build": "000",
+                            "locale_version": "INTL",
+                            "os_type": "linux-x64",
+                            "product_full_name": "VMware vCenter Server 8.0.3 build-24322831",
+                            "product_line_id": "vpx",
+                            "product_name": "VMware vCenter Server",
+                            "vendor": "VMware, Inc.",
+                            "version": "8.0.3"
+                        },
+                        "changed": false,
+                        "invocation": {
+                            "module_args": {
+                                "hostname": "vcsnsx-vc.infra.demo.redhat.com",
+                                "password": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
+                                "port": 443,
+                                "proxy_host": null,
+                                "proxy_port": null,
+                                "username": "sandbox-xdlf9@demo",
+                                "validate_certs": false
+                            }
+                        }
+                    },
+                    "resolved_action": "community.vmware.vmware_about_info",
+                    "start": "2025-11-17T11:32:30.733674",
+                    "task": "Get vCenter version",
+                    "task_action": "community.vmware.vmware_about_info",
+                    "task_args": "",
+                    "task_path": "/home/student1/vmware-poc/test_conn.yaml:20",
+                    "task_uuid": "2e881c0a-7777-2d53-c351-000000000007",
+                    "uuid": "6fbf4108-9319-42da-9aaa-abbc08784ad9"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "localhost",
+                    "__number": 1,
+                    "__result": "Ok",
+                    "__task": "Show vCenter information",
+                    "__task_action": "debug",
+                    "duration": 0.029955,
+                    "end": "2025-11-17T11:32:32.591712",
+                    "event_loop": null,
+                    "host": "localhost",
+                    "play": "Test VMware collection",
+                    "play_pattern": "localhost",
+                    "play_uuid": "2e881c0a-7777-2d53-c351-000000000005",
+                    "playbook": "/home/student1/vmware-poc/test_conn.yaml",
+                    "playbook_uuid": "838b69bc-86aa-4dc2-9dbc-cefc1bce0383",
+                    "remote_addr": "127.0.0.1",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "_ansible_verbose_always": true,
+                        "about": {
+                            "about_info": {
+                                "api_type": "VirtualCenter",
+                                "api_version": "8.0.3.0",
+                                "build": "24322831",
+                                "instance_uuid": "3a76dcad-70e0-4775-9e3f-f7d20e1dd8f0",
+                                "license_product_name": "VMware VirtualCenter Server",
+                                "license_product_version": "8.0",
+                                "locale_build": "000",
+                                "locale_version": "INTL",
+                                "os_type": "linux-x64",
+                                "product_full_name": "VMware vCenter Server 8.0.3 build-24322831",
+                                "product_line_id": "vpx",
+                                "product_name": "VMware vCenter Server",
+                                "vendor": "VMware, Inc.",
+                                "version": "8.0.3"
+                            },
+                            "changed": false,
+                            "failed": false
+                        },
+                        "changed": false
+                    },
+                    "resolved_action": "ansible.builtin.debug",
+                    "start": "2025-11-17T11:32:32.561757",
+                    "task": "Show vCenter information",
+                    "task_action": "debug",
+                    "task_args": "",
+                    "task_path": "/home/student1/vmware-poc/test_conn.yaml:28",
+                    "task_uuid": "2e881c0a-7777-2d53-c351-000000000008",
+                    "uuid": "7fcb664a-6c7e-45e1-a8cd-db91a2b3b4b1"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "4s",
+                    "__host": "localhost",
+                    "__number": 2,
+                    "__result": "Ok",
+                    "__task": "Gather current VM disk info",
+                    "__task_action": "community.vmware.vmware_guest_disk_info",
+                    "duration": 3.534431,
+                    "end": "2025-11-17T11:32:36.136585",
+                    "event_loop": null,
+                    "host": "localhost",
+                    "play": "Test VMware collection",
+                    "play_pattern": "localhost",
+                    "play_uuid": "2e881c0a-7777-2d53-c351-000000000005",
+                    "playbook": "/home/student1/vmware-poc/test_conn.yaml",
+                    "playbook_uuid": "838b69bc-86aa-4dc2-9dbc-cefc1bce0383",
+                    "remote_addr": "127.0.0.1",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "changed": false,
+                        "guest_disk_info": {
+                            "0": {
+                                "backing_datastore": "workload_share_yBaQN",
+                                "backing_disk_mode": "persistent",
+                                "backing_diskmode": "persistent",
+                                "backing_eagerlyscrub": false,
+                                "backing_filename": "[workload_share_yBaQN] test-vm/test-vm.vmdk",
+                                "backing_sharing": "sharingNone",
+                                "backing_thinprovisioned": true,
+                                "backing_type": "FlatVer2",
+                                "backing_uuid": "6000C297-f450-c4a5-7733-3656d5023e4c",
+                                "backing_writethrough": false,
+                                "capacity_in_bytes": 17179869184,
+                                "capacity_in_kb": 16777216,
+                                "controller_bus_number": 0,
+                                "controller_key": 1000,
+                                "controller_type": "paravirtual",
+                                "iolimit_limit": -1,
+                                "iolimit_shares_level": "normal",
+                                "iolimit_shares_limit": 1000,
+                                "key": 2000,
+                                "label": "Hard disk 1",
+                                "shares_level": "normal",
+                                "shares_limit": 1000,
+                                "summary": "16,777,216 KB",
+                                "unit_number": 0
+                            }
+                        },
+                        "invocation": {
+                            "module_args": {
+                                "datacenter": "SDDC-Datacenter",
+                                "folder": null,
+                                "hostname": "vcsnsx-vc.infra.demo.redhat.com",
+                                "moid": null,
+                                "name": "test-vm",
+                                "password": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
+                                "port": 443,
+                                "proxy_host": null,
+                                "proxy_port": null,
+                                "use_instance_uuid": false,
+                                "username": "sandbox-xdlf9@demo",
+                                "uuid": null,
+                                "validate_certs": false
+                            }
+                        }
+                    },
+                    "resolved_action": "community.vmware.vmware_guest_disk_info",
+                    "start": "2025-11-17T11:32:32.602154",
+                    "task": "Gather current VM disk info",
+                    "task_action": "community.vmware.vmware_guest_disk_info",
+                    "task_args": "",
+                    "task_path": "/home/student1/vmware-poc/test_conn.yaml:32",
+                    "task_uuid": "2e881c0a-7777-2d53-c351-000000000009",
+                    "uuid": "e1fb6873-ff6a-40aa-b1b0-d40978cb544e"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "localhost",
+                    "__number": 3,
+                    "__result": "Ok",
+                    "__task": "Normalize disk list",
+                    "__task_action": "ansible.builtin.set_fact",
+                    "duration": 0.054655,
+                    "end": "2025-11-17T11:32:36.202584",
+                    "event_loop": null,
+                    "host": "localhost",
+                    "play": "Test VMware collection",
+                    "play_pattern": "localhost",
+                    "play_uuid": "2e881c0a-7777-2d53-c351-000000000005",
+                    "playbook": "/home/student1/vmware-poc/test_conn.yaml",
+                    "playbook_uuid": "838b69bc-86aa-4dc2-9dbc-cefc1bce0383",
+                    "remote_addr": "127.0.0.1",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "ansible_facts": {
+                            "disk_list": [
+                                {
+                                    "backing_datastore": "workload_share_yBaQN",
+                                    "backing_disk_mode": "persistent",
+                                    "backing_diskmode": "persistent",
+                                    "backing_eagerlyscrub": false,
+                                    "backing_filename": "[workload_share_yBaQN] test-vm/test-vm.vmdk",
+                                    "backing_sharing": "sharingNone",
+                                    "backing_thinprovisioned": true,
+                                    "backing_type": "FlatVer2",
+                                    "backing_uuid": "6000C297-f450-c4a5-7733-3656d5023e4c",
+                                    "backing_writethrough": false,
+                                    "capacity_in_bytes": 17179869184,
+                                    "capacity_in_kb": 16777216,
+                                    "controller_bus_number": 0,
+                                    "controller_key": 1000,
+                                    "controller_type": "paravirtual",
+                                    "iolimit_limit": -1,
+                                    "iolimit_shares_level": "normal",
+                                    "iolimit_shares_limit": 1000,
+                                    "key": 2000,
+                                    "label": "Hard disk 1",
+                                    "shares_level": "normal",
+                                    "shares_limit": 1000,
+                                    "summary": "16,777,216 KB",
+                                    "unit_number": 0
+                                }
+                            ]
+                        },
+                        "changed": false
+                    },
+                    "resolved_action": "ansible.builtin.set_fact",
+                    "start": "2025-11-17T11:32:36.147929",
+                    "task": "Normalize disk list",
+                    "task_action": "ansible.builtin.set_fact",
+                    "task_args": "",
+                    "task_path": "/home/student1/vmware-poc/test_conn.yaml:42",
+                    "task_uuid": "2e881c0a-7777-2d53-c351-00000000000a",
+                    "uuid": "ef9a4d35-f36f-46c9-aeda-b633066ddc53"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "localhost",
+                    "__number": 4,
+                    "__result": "Failed",
+                    "__task": "Calculate next SCSI controller and unit number",
+                    "__task_action": "ansible.builtin.set_fact",
+                    "duration": 0.046307,
+                    "end": "2025-11-17T11:32:36.258681",
+                    "event_loop": null,
+                    "host": "localhost",
+                    "ignore_errors": null,
+                    "play": "Test VMware collection",
+                    "play_pattern": "localhost",
+                    "play_uuid": "2e881c0a-7777-2d53-c351-000000000005",
+                    "playbook": "/home/student1/vmware-poc/test_conn.yaml",
+                    "playbook_uuid": "838b69bc-86aa-4dc2-9dbc-cefc1bce0383",
+                    "remote_addr": "127.0.0.1",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "msg": "The task includes an option with an undefined variable. The error was: 'used_controllers' is undefined. 'used_controllers' is undefined\n\nThe error appears to be in '/home/student1/vmware-poc/test_conn.yaml': line 61, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n    - name: Calculate next SCSI controller and unit number\n      ^ here\n"
+                    },
+                    "resolved_action": "ansible.builtin.set_fact",
+                    "start": "2025-11-17T11:32:36.212374",
+                    "task": "Calculate next SCSI controller and unit number",
+                    "task_action": "ansible.builtin.set_fact",
+                    "task_args": "",
+                    "task_path": "/home/student1/vmware-poc/test_conn.yaml:61",
+                    "task_uuid": "2e881c0a-7777-2d53-c351-00000000000b",
+                    "uuid": "869c0c99-e086-4379-9d1a-5dde84c915a9"
+                }
+            ],
+            "uuid": "2e881c0a-7777-2d53-c351-000000000005"
+        }
+    ],
+    "settings_entries": {
+        "ansible-navigator": {
+            "ansible": {
+                "config": {
+                    "help": false
+                },
+                "doc": {
+                    "help": false,
+                    "plugin": {
+                        "type": "module"
+                    }
+                },
+                "inventory": {
+                    "entries": [
+                        "/home/student1/lab_inventory/hosts"
+                    ],
+                    "help": false
+                },
+                "playbook": {
+                    "help": false,
+                    "path": "/home/student1/vmware-poc/test_conn.yaml"
+                }
+            },
+            "ansible-builder": {
+                "help": false,
+                "workdir": "/home/student1/vmware-poc"
+            },
+            "ansible-runner": {
+                "job-events": false
+            },
+            "app": "run",
+            "collection-doc-cache-path": "/home/student1/.cache/ansible-navigator/collection_doc_cache.db",
+            "color": {
+                "enable": true,
+                "osc4": true
+            },
+            "editor": {
+                "command": "vi +{line_number} {filename}",
+                "console": true
+            },
+            "enable-prompts": false,
+            "exec": {
+                "command": "/bin/bash",
+                "shell": true
+            },
+            "execution-environment": {
+                "container-engine": "podman",
+                "enabled": true,
+                "image": "ee-vmware:latest",
+                "pull": {
+                    "policy": "missing"
+                },
+                "volume-mounts": [
+                    {
+                        "dest": "/etc/ansible",
+                        "src": "/etc/ansible"
+                    }
+                ]
+            },
+            "format": "yaml",
+            "images": {
+                "details": [
+                    "everything"
+                ]
+            },
+            "logging": {
+                "append": true,
+                "file": "/home/student1/vmware-poc/ansible-navigator.log",
+                "level": "warning"
+            },
+            "mode": "stdout",
+            "playbook-artifact": {
+                "enable": true,
+                "save-as": "{playbook_dir}/{playbook_name}-artifact-{time_stamp}.json"
+            },
+            "settings": {
+                "effective": false,
+                "sample": false,
+                "schema": "json",
+                "sources": false
+            },
+            "time-zone": "UTC"
+        }
+    },
+    "settings_sources": {
+        "ansible-navigator.ansible-builder.help": "Defaults",
+        "ansible-navigator.ansible-builder.workdir": "Defaults",
+        "ansible-navigator.ansible-lint.config": "Not set",
+        "ansible-navigator.ansible-lint.lintables": "Not set",
+        "ansible-navigator.ansible-runner.artifact-dir": "Not set",
+        "ansible-navigator.ansible-runner.job-events": "Defaults",
+        "ansible-navigator.ansible-runner.rotate-artifacts-count": "Not set",
+        "ansible-navigator.ansible-runner.timeout": "Not set",
+        "ansible-navigator.ansible.cmdline": "Not set",
+        "ansible-navigator.ansible.config.help": "Defaults",
+        "ansible-navigator.ansible.config.path": "Not set",
+        "ansible-navigator.ansible.doc.help": "Defaults",
+        "ansible-navigator.ansible.doc.plugin.name": "Not set",
+        "ansible-navigator.ansible.doc.plugin.type": "Defaults",
+        "ansible-navigator.ansible.inventory.entries": "Settings file",
+        "ansible-navigator.ansible.inventory.help": "Defaults",
+        "ansible-navigator.ansible.playbook.help": "Defaults",
+        "ansible-navigator.ansible.playbook.path": "Command line",
+        "ansible-navigator.app": "Command line",
+        "ansible-navigator.collection-doc-cache-path": "Defaults",
+        "ansible-navigator.color.enable": "Defaults",
+        "ansible-navigator.color.osc4": "Defaults",
+        "ansible-navigator.editor.command": "Defaults",
+        "ansible-navigator.editor.console": "Defaults",
+        "ansible-navigator.enable-prompts": "Defaults",
+        "ansible-navigator.exec.command": "Defaults",
+        "ansible-navigator.exec.shell": "Defaults",
+        "ansible-navigator.execution-environment.container-engine": "Settings file",
+        "ansible-navigator.execution-environment.container-options": "Not set",
+        "ansible-navigator.execution-environment.enabled": "Settings file",
+        "ansible-navigator.execution-environment.environment-variables.pass": "Not set",
+        "ansible-navigator.execution-environment.environment-variables.set": "Not set",
+        "ansible-navigator.execution-environment.image": "Command line",
+        "ansible-navigator.execution-environment.pull.arguments": "Not set",
+        "ansible-navigator.execution-environment.pull.policy": "Settings file",
+        "ansible-navigator.execution-environment.volume-mounts": "Settings file",
+        "ansible-navigator.format": "Defaults",
+        "ansible-navigator.images.details": "Defaults",
+        "ansible-navigator.inventory-columns": "Not set",
+        "ansible-navigator.logging.append": "Defaults",
+        "ansible-navigator.logging.file": "Defaults",
+        "ansible-navigator.logging.level": "Defaults",
+        "ansible-navigator.mode": "Command line",
+        "ansible-navigator.playbook-artifact.enable": "Defaults",
+        "ansible-navigator.playbook-artifact.replay": "Not set",
+        "ansible-navigator.playbook-artifact.save-as": "Defaults",
+        "ansible-navigator.settings.effective": "Defaults",
+        "ansible-navigator.settings.sample": "Defaults",
+        "ansible-navigator.settings.schema": "Defaults",
+        "ansible-navigator.settings.sources": "Defaults",
+        "ansible-navigator.time-zone": "Defaults",
+        "settings_file_path": "/home/student1/.ansible-navigator.yml",
+        "settings_file_source": "Search path"
+    },
+    "status": "failed",
+    "status_color": 9,
+    "stdout": [
+        "",
+        "PLAY [Test VMware collection] **************************************************",
+        "",
+        "TASK [Get vCenter version] *****************************************************",
+        "\u001b[0;32mok: [localhost]\u001b[0m",
+        "",
+        "TASK [Show vCenter information] ************************************************",
+        "\u001b[0;32mok: [localhost] => {\u001b[0m",
+        "\u001b[0;32m    \"about\": {\u001b[0m",
+        "\u001b[0;32m        \"about_info\": {\u001b[0m",
+        "\u001b[0;32m            \"api_type\": \"VirtualCenter\",\u001b[0m",
+        "\u001b[0;32m            \"api_version\": \"8.0.3.0\",\u001b[0m",
+        "\u001b[0;32m            \"build\": \"24322831\",\u001b[0m",
+        "\u001b[0;32m            \"instance_uuid\": \"3a76dcad-70e0-4775-9e3f-f7d20e1dd8f0\",\u001b[0m",
+        "\u001b[0;32m            \"license_product_name\": \"VMware VirtualCenter Server\",\u001b[0m",
+        "\u001b[0;32m            \"license_product_version\": \"8.0\",\u001b[0m",
+        "\u001b[0;32m            \"locale_build\": \"000\",\u001b[0m",
+        "\u001b[0;32m            \"locale_version\": \"INTL\",\u001b[0m",
+        "\u001b[0;32m            \"os_type\": \"linux-x64\",\u001b[0m",
+        "\u001b[0;32m            \"product_full_name\": \"VMware vCenter Server 8.0.3 build-24322831\",\u001b[0m",
+        "\u001b[0;32m            \"product_line_id\": \"vpx\",\u001b[0m",
+        "\u001b[0;32m            \"product_name\": \"VMware vCenter Server\",\u001b[0m",
+        "\u001b[0;32m            \"vendor\": \"VMware, Inc.\",\u001b[0m",
+        "\u001b[0;32m            \"version\": \"8.0.3\"\u001b[0m",
+        "\u001b[0;32m        },\u001b[0m",
+        "\u001b[0;32m        \"changed\": false,\u001b[0m",
+        "\u001b[0;32m        \"failed\": false\u001b[0m",
+        "\u001b[0;32m    }\u001b[0m",
+        "\u001b[0;32m}\u001b[0m",
+        "",
+        "TASK [Gather current VM disk info] *********************************************",
+        "\u001b[0;32mok: [localhost]\u001b[0m",
+        "",
+        "TASK [Normalize disk list] *****************************************************",
+        "\u001b[0;32mok: [localhost]\u001b[0m",
+        "",
+        "TASK [Calculate next SCSI controller and unit number] **************************",
+        "\u001b[0;31mfatal: [localhost]: FAILED! => {\"msg\": \"The task includes an option with an undefined variable. The error was: 'used_controllers' is undefined. 'used_controllers' is undefined\\n\\nThe error appears to be in '/home/student1/vmware-poc/test_conn.yaml': line 61, column 7, but may\\nbe elsewhere in the file depending on the exact syntax problem.\\n\\nThe offending line appears to be:\\n\\n\\n    - name: Calculate next SCSI controller and unit number\\n      ^ here\\n\"}\u001b[0m",
+        "",
+        "PLAY RECAP *********************************************************************",
+        "\u001b[0;31mlocalhost\u001b[0m                  : \u001b[0;32mok=4   \u001b[0m changed=0    unreachable=0    \u001b[0;31mfailed=1   \u001b[0m skipped=0    rescued=0    ignored=0   "
+    ],
+    "version": "2.0.0"
+}
