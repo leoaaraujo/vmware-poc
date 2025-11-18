@@ -38,5 +38,4 @@
       - "{{ add_disk_result }}"
       - "{{ add_disk_result.changed }}"
       - "{{ add_disk_result.disk_changes }}"
-      - "{{ add_disk_result.disk_changes.0 }}"
 
