@@ -27,15 +27,3 @@
       - "──────────────────────────────────────"
       - "Result: {{ add_disk_result.msg | default('Operation completed successfully.') }}"
 
-      
-#- name: Extract Disk Status 
-#  ansible.builtin.set_fact:
-#    disk_status: "{{ add_disk_result.changed == true | ternary('OK','NOK') }}"
-
-- name: Show var
-  ansible.builtin.debug:
-    msg: 
-      - "{{ add_disk_result }}"
-      - "{{ add_disk_result.changed }}"
-      - "{{ add_disk_result.disk_changes }}"
-
