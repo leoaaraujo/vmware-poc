@@ -30,4 +30,8 @@
       
 - name: Extract Disk Status 
   ansible.builtin.set_fact:
-    disk_status: "{{ add_disk_result.changed }}"
+    disk_status: "{{ add_disk_result.changed == 'true' | ternary('OK','NOK') }}"
+
+- name: Show var
+  ansible.builtin.debug:
+    msg: "{{ disk_status }}"
