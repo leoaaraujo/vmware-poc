@@ -9,4 +9,4 @@
 
 - name: Include Cloud-Init task  
   ansible.builtin.include_tasks: cloud_init.yaml
-  when: cloud_init == "True" and disk_status == "OK"
+  when: cloud_init == "True" and add_disk_result.changed 
