@@ -26,3 +26,8 @@
       - "Unit Number: {{ next_unit_number }}"
       - "──────────────────────────────────────"
       - "Result: {{ add_disk_result.msg | default('Operation completed successfully.') }}"
+
+      
+- name: Show result summary
+  ansible.builtin.debug:
+    msg: "{{ add_disk_result }}"
