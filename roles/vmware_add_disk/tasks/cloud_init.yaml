@@ -10,7 +10,8 @@
     dest: /tmp/metadata.yaml
 
 - name: Apply cloud-init guestinfo
-  community.vmware.vmware_guest:
+  community.vmware.vmware_guest_extra_config:
+    datacenter: "{{ datacenter }}"
     name: "{{ vm_name }}"
     state: present
     extra_config:
