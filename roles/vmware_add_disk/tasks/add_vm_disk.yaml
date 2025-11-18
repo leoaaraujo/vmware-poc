@@ -28,6 +28,6 @@
       - "Result: {{ add_disk_result.msg | default('Operation completed successfully.') }}"
 
       
-- name: Show result summary
+- name: Show changed
   ansible.builtin.debug:
-    msg: "{{ add_disk_result.msg.changed }}"
+    msg: "{{ add_disk_result.changed }}"
