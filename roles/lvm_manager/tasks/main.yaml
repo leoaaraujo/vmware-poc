@@ -16,11 +16,11 @@
       10: "k"  
 
 - debug:
-    msg: "/dev/sd{{ disk_letter_map[lvm_unit_number] }}"
+    msg: "/dev/sd{{ disk_letter_map[lvm_unit_number | string] }}"
 
 - name: Map disk path
   ansible.builtin.set_fact:
-    lvm_disk_path: "/dev/sd{{ disk_letter_map[lvm_unit_number] }}"
+    lvm_disk_path: "/dev/sd{{ disk_letter_map[lvm_unit_number | string] }}"
 
 - name: Ensure new disk is available
   wait_for:
