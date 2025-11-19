@@ -8,11 +8,6 @@
   ansible.builtin.set_fact:
     lvm_disk_path: "/dev/sd{{ disk_letter }}"
 
-- name: Ensure new disk is available
-  wait_for:
-    path: "{{ lvm_disk_path }}"
-    timeout: 30
-
 - name: Extend existing LVM
   ansible.builtin.include_tasks: extend_lvm.yaml
   when: lvm_action == "extend"
