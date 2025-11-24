@@ -1,4 +1,6 @@
 # ignore test files
+inventory
+ping.yaml
 test_conn.yaml
 *.log
 *.json

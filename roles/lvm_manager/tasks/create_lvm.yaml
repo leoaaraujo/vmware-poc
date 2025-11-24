@@ -6,12 +6,12 @@
     label: gpt
     state: present
 
-- name: Create PV
-  community.general.lvol:
-    pv: "{{ lvm_disk_path }}1"
+- name: Create or extend VG (this also creates PV if missing)
+  community.general.lvg:
     vg: "{{ vg_name }}"
+    pvs:
+      - "{{ lvm_disk_path }}1"
     state: present
-  register: pv_result
 
 - name: Create or extend VG
   community.general.lvg:

@@ -1,5 +1,5 @@
 ---
-lvm_unit_number: "{{ next_unit_number }}"
+lvm_disk_path: ""
 vg_name: ""
 lv_name: ""
 mountpoint: ""

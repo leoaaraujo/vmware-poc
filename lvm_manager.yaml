@@ -1,13 +1,10 @@
 ---
 - name: LVM manager for the new disk
-  hosts: all
-  connection: local
-  gather_facts: false
+  hosts: nodes
+  gather_facts: true
   collections:
     - community.general
     - ansible.posix
     - ansible.builtin
   roles:
     - role: lvm_manager
-      vars:
-        lvm_unit_number: "{{ next_unit_number }}"
