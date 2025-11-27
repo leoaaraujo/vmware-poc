@@ -1,15 +1,8 @@
 ---
 
-- name: Ensure partition exists
-  community.general.parted:
-    device: "{{ lvm_disk_path }}"
-    number: 1
-    label: gpt
-    state: present
-
 - name: Ensure PV exists
   community.general.lvol:
-    pv: "{{ lvm_disk_path}}1"
+    pv: "{{ lvm_disk_path}}"
     vg: "{{ vg_name }}"
     state: present
 
@@ -17,7 +10,7 @@
   community.general.lvg:
     vg: "{{ vg_name }}"
     pvs:
-      - "{{ lvm_disk_path }}1"
+      - "{{ lvm_disk_path }}"
     state: present
 
 - name: Extend LV
