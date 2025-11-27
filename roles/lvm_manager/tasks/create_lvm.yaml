@@ -1,11 +1,4 @@
 ---
-- name: Create partition on disk if missing
-  community.general.parted:
-    device: "{{ lvm_disk_path }}"
-    number: 1
-    label: gpt
-    state: present
-
 - name: Create or extend VG (this also creates PV if missing)
   community.general.lvg:
     vg: "{{ vg_name }}"
@@ -17,7 +10,7 @@
   community.general.lvg:
     vg: "{{ vg_name }}"
     pvs:
-      - "{{ lvm_disk_path }}1"
+      - "{{ lvm_disk_path }}"
     state: present
 
 - name: Create LV
